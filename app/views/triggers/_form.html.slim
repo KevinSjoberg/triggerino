@@ -1,14 +1,19 @@
-= form_for(@trigger) do |f|
+= form_for(@trigger, :html => {:class => 'form-group'}) do |f|
+
   = f.label :action
-  = f.text_field :action
+  br
+  = f.text_field :action, class: 'form-control'
   br
 
   = f.label :data
-  = f.text_field :data
+  br
+  = f.text_field :data, class: 'form-control'
   br
   = f.label :phrase
-  = f.text_field :phrase
   br
-  = f.submit
+  = f.text_field :phrase, class: 'form-control'
+  br
+  br
+  = f.submit :Submit, class: 'btn btn-success'
 
 end
